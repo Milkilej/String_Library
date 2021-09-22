@@ -1,0 +1,5 @@
+add_library(implementation stringLib.cpp)
+target_include_directories(implementations PUBLIC include)
+
+add_executable(tests_for_legacy stringLibTest.cpp)
+target_link_libraries(tests_for_legacy gtest gtest_main implementations)
